@@ -1,0 +1,205 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 5px;
+  }
+  input {
+    padding: 5px;
+    border: 1px solid #95a5a6;
+    width: 100%;
+    border-radius: 5px;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: bold
+  }
+  summary:focus {
+    outline: none;
+  }
+  section.loader {
+    font-family: Raleway;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  button {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #95a5a6;
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+    width: 100%;
+  }
+  li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #95a5a6;
+    padding: 10px;
+    border-radius: 4px;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+  }
+  li:hover {
+    color: #95a5a6;
+    background-color: #ecf0f1;
+    border: 1px solid #95a5a6;
+    left: .1em;
+  }
+  li.selected {
+    background-color: black;
+    color: white;
+  }
+  li.selected:hover {
+    background-color: #505050;
+    color: white;
+  }
+  li.selected:active {
+    background-color: black;
+    color: white;
+  }
+  input[type='radio'] {
+	 position: absolute;
+	 opacity: 0;
+	 z-index: -1;
+  }
+  .container {
+    max-width: 300px;
+    margin: 100px auto;
+  }
+
+  hr.style {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  /**
+  *  PRELOADER
+  */
+  .grid {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .loader .dot-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  
+  .loader .dot {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 50%;
+    animation: pulse2 1s linear infinite;
+  }
+  
+  .loader .dot1 {
+    animation-delay: 0.2s;
+  }
+  
+  .loader .dot2 {
+    animation-delay: 0.4s;
+  }
+  
+  .loader .dot3 {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes pulse2 {
+    0%, 100% {transform: scale(0.2);}
+    50% {transform: scale(1);}
+  }
+  
+
+ .row {
+	 display: flex;
+}
+ .row .col {
+	 flex: 1;
+}
+ .row .col:last-child {
+	 margin-left: 1em;
+}
+
+/* 
+* Accordion 
+*/
+ .tabs {
+	 border-radius: 8px;
+	 overflow: hidden;
+	 box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+ .tab {
+	 width: 100%;
+	 color: white;
+	 overflow: hidden;
+}
+ .tab-label {
+	 display: flex;
+	 justify-content: space-between;
+	 padding: 1em;
+	 background: #2c3e50;
+	 font-weight: bold;
+	 cursor: pointer;
+}
+ .tab-label:hover {
+	 background: #1a252f;
+}
+ .tab-label::after {
+	 content: "\276F";
+	 width: 1em;
+	 height: 1em;
+	 text-align: center;
+	 transition: all 0.35s;
+}
+ .tab-content {
+	 max-height: 0;
+	 padding: 0 1em;
+	 color: #2c3e50;
+	 background: white;
+	 transition: all 0.35s;
+}
+ .tab-close {
+	 display: flex;
+	 justify-content: flex-end;
+	 padding: 1em;
+	 font-size: 0.75em;
+	 background: #2c3e50;
+	 cursor: pointer;
+}
+ .tab-close:hover {
+	 background: #1a252f;
+}
+ input:checked + .tab-label {
+	 background: #2c3e50;
+}
+ input:checked + .tab-label::after {
+	 transform: rotate(90deg);
+}
+ input:checked ~ .tab-content {
+	 max-height: 100vh;
+	 padding: 1em;
+}

@@ -1,2 +1,2 @@
-# assessment for frontend developer
+# assessment project
 
